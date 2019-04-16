@@ -20,7 +20,7 @@ class Todos extends Component {
     addTodos = () => {
 
         console.log('fired')
-        this.props.addTodos(this.state.todo);
+        this.props.addTodos(this.state.todos);
 
         this.setState({
             todos:''
@@ -36,7 +36,7 @@ class Todos extends Component {
 
         <input 
             type='text'
-            name='todo'
+            name='todos'
             value={this.state.todos}
             placeholder='new todos...'
             onChange={this.handleChange}
@@ -45,8 +45,7 @@ class Todos extends Component {
         <button onClick={this.addTodos}>Add Todo</button>
 
         {this.props.todos.map((todo, id)=>
-        
-            
+
             (<div onClick={()=> this.props.toggleTodos(id)} key={id} className='todo'>
                 <p>{todo.value}</p>
             </div>)
