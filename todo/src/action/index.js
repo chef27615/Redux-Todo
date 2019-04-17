@@ -1,5 +1,7 @@
 export const ADD_TODOS = 'ADD_TODOS';
 export const TOGGLE_TODOS = 'TOGGLE_TODOS';
+export const DELETE_TODOS = 'DELETE_TODOS';
+
 
 export function addTodos(newTodo){
     return{
@@ -14,3 +16,10 @@ export function toggleTodos(index){
         payload: index
     }
 }
+
+// export function deleteTodos(index){
+//     return{
+//         type: DELETE_TODOS,
+//         payload: index
+//     }
+// }

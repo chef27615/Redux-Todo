@@ -1,4 +1,4 @@
-import { ADD_TODOS, TOGGLE_TODOS } from '../action';
+import { ADD_TODOS, TOGGLE_TODOS, DELETE_TODOS } from '../action';
 
 const initialState = {
     todos : [
@@ -30,6 +30,15 @@ function reducer( state=initialState, action ) {
                 return todo;
             })
         } 
+
+        // case DELETE_TODOS:
+        // return {
+        //     ...state,
+        //     todos: state.todos.filter(todo => {
+        //         if(todo)
+        //     })
+        // }
+
     default:
      return state;
     }

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 import { connect } from 'react-redux';
 
-import { addTodos, toggleTodos } from '../action';
+import { addTodos, toggleTodos, deleteTodos } from '../action';
 
 class Todos extends Component {
 
@@ -29,7 +29,7 @@ class Todos extends Component {
 
 
   render() {
-    
+    console.log('todos',this.props);
     return (
       <div>
         <h2>Todo List Redux</h2>
@@ -48,6 +48,7 @@ class Todos extends Component {
 
             (<div onClick={()=> this.props.toggleTodos(id)} key={id} className='todo'>
                 <p>{todo.value}</p>
+                {/* <button onClick={()=>{this.props.deleteTodos(index)}}> X </button> */}
             </div>)
         )}
       </div>
