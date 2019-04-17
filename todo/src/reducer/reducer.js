@@ -27,7 +27,7 @@ function reducer( state=initialState, action ) {
                 if(index === action.payload)
                     return{...todo, completed: !todo.completed}
                 
-                return state.todos;
+                return todo;
             })
         } 
     default:
