@@ -17,9 +17,9 @@ export function toggleTodos(index){
     }
 }
 
-// export function deleteTodos(index){
-//     return{
-//         type: DELETE_TODOS,
-//         payload: index
-//     }
-// }
+export function deleteTodos(index){
+    return{
+        type: DELETE_TODOS,
+        payload: index
+    }
+}

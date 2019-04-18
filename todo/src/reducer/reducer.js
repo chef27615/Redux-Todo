@@ -31,13 +31,11 @@ function reducer( state=initialState, action ) {
             })
         } 
 
-        // case DELETE_TODOS:
-        // return {
-        //     ...state,
-        //     todos: state.todos.filter(todo => {
-        //         if(todo)
-        //     })
-        // }
+        case DELETE_TODOS:
+        return {
+            ...state,
+            todos: state.todos.filter(index => index !== action.payload)
+        }
 
     default:
      return state;
